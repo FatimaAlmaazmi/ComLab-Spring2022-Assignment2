@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Roboto+Serif:ital@1&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Roboto:wght@300&display=swap');
+
+*{ /*universal selector*/
+	list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: white;
+}
+
+.sidebar{
+    background: white; /*colors picked from hex value generator*/
+    /*defining sidebar dimensions*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    border-right: 1px solid #ff8000; 
+    /*to control speed at which bar shows up*/
+    transition: all 0.5s ease;
+}
+
+.sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #ff8000;
+    color: #e67300;
+    font-size: 20px;
+    position: relative;
+}
+
+.sidebar .icon{
+    color: #ff8000;
+    width: 30px;
+    display: inline-block;
+}
+
+
+.sidebar ul li a:hover{ /*if hover over ul, li, or a tags specifically*/
+    color: white;
+    background: #ff8000;
+    border-right: 2px solid #ff8000;
+}
+
+.sidebar ul li a:hover .icon{
+    color: white;
+}
+
+.header{ /*defining dimensions for page with the sidebar toggled on inititally*/
+	position: fixed;
+	top: 0;
+    margin-left: 225px;
+    font-size: 22px;
+    /*adding transition to synch with sidebar*/
+    transition: all 0.5s ease;
+    width: calc(100% - 225px); /*to keep width fixed regardless of siderbar toggle*/
+}
+
+.navbar{
+	/*defining dimensions for header bar*/
+    background: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.bars a{ 
+    color: #ffa64d;
+}
+
+.bars a:hover{ /*if hovering over the bar icon*/
+    color: #e67300;
+}
+
+.main{
+	display:  flex;
+	/*column and flex:1 to make every section fit into a column*/
+	flex-direction: column;
+	flex:  1;
+	align-items: center;
+	font-size: 25px;
+	margin-top: 80px;
+	margin-left: 225px;
+    /*adding transition to synch with sidebar*/
+    transition: all 0.5s ease;
+    width: calc(100% - 225px); /*to keep width fixed regardless of siderbar toggle*/
+}
+
+
+body.active .sidebar{ /*if sidebar is active*/
+    left: -225px;
+}
+
+body.active .header, body.active .footer, body.active .main{ /*if sidebar is not active*/
+    margin-left: 0;
+    width: 100%;
+}
