@@ -23,7 +23,7 @@ body{
     width: 225px;
     height: 100%;
     padding: 20px 0;
-    border-right: 1px solid #ff8000; 
+    border-right: 2px solid #ff8000; 
     /*to control speed at which bar shows up*/
     transition: all 0.5s ease;
 }
@@ -55,7 +55,7 @@ body{
 }
 
 .header{ /*defining dimensions for page with the sidebar toggled on inititally*/
-	position: fixed;
+	position: absolute;
 	top: 0;
     margin-left: 225px;
     font-size: 22px;
@@ -95,12 +95,80 @@ body{
     width: calc(100% - 225px); /*to keep width fixed regardless of siderbar toggle*/
 }
 
+.panel {
+	display: flex;
+	flex-direction: column;
+	margin: 50px;
+	margin-left: 225px;
+	margin-top: 30px;
+	width: calc(100% - 225px);
+	transition: all 0.5s ease;
+	justify-content: center;
+}
+
+.subpanel{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: right;
+	text-align: right;
+	margin-top: 20px;
+}
+
+.img1{
+	flex: 1;
+	text-align: right;
+	margin-left: 4.5%;
+}
+.img2{
+	flex: 1;
+	text-align: center;
+}
+.img3{
+	flex: 1.5;
+	text-align: left;
+	margin-right: 2%;
+}
+
+.img1 img, .img2 img, .img3 img {
+	height: 90%;
+}
+
+.img4{
+	flex: 1;
+	text-align: right;
+	margin-left: 4.3%;
+}
+.img5{
+	flex: 1.25;
+	text-align: center;
+}
+.img6{
+	flex: 1;
+	text-align: left;
+	margin-right: 4.6%;
+}
+
+.img4 img, .img5 img, .img6 img {
+	height: 90%;
+}
+
+#pan0{
+	margin-top: -100px;
+}
+
+.panel img{
+	flex: 1;
+	width: 80%;
+	align-self: center;
+}
+
 
 body.active .sidebar{ /*if sidebar is active*/
     left: -225px;
 }
 
-body.active .header, body.active .footer, body.active .main{ /*if sidebar is not active*/
+body.active .header, body.active .main, body.active .panel{ /*if sidebar is not active*/
     margin-left: 0;
     width: 100%;
 }
