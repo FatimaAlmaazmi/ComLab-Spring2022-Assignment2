@@ -9,7 +9,9 @@
     box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 }
-
+html {
+	 scroll-snap-type: y mandatory;
+}
 body{
     background: white;
 }
@@ -19,11 +21,11 @@ body{
     /*defining sidebar dimensions*/
     position: fixed;
     top: 0;
-    left: 0;
+  	left: 0;
     width: 225px;
     height: 100%;
     padding: 20px 0;
-    border-right: 2px solid #ff8000; 
+    border-right: 2px solid #ff8000;
     /*to control speed at which bar shows up*/
     transition: all 0.5s ease;
 }
@@ -54,7 +56,7 @@ body{
     color: white;
 }
 
-.header{ /*defining dimensions for page with the sidebar toggled on inititally*/
+.header { /*defining dimensions for page with the sidebar toggled on inititally*/
 	position: absolute;
 	top: 0;
     margin-left: 225px;
@@ -73,7 +75,7 @@ body{
     padding: 0 30px;
 }
 
-.bars a{ 
+.bars a{
     color: #ffa64d;
 }
 
@@ -81,19 +83,22 @@ body{
     color: #e67300;
 }
 
-.main{
+
+
+
+ /*#main{
 	display:  flex;
-	/*column and flex:1 to make every section fit into a column*/
+	column and flex:1 to make every section fit into a column
 	flex-direction: column;
 	flex:  1;
 	align-items: center;
 	font-size: 25px;
 	margin-top: 80px;
 	margin-left: 225px;
-    /*adding transition to synch with sidebar*/
+    adding transition to synch with sidebar
     transition: all 0.5s ease;
-    width: calc(100% - 225px); /*to keep width fixed regardless of siderbar toggle*/
-}
+    width: calc(100% - 225px); /*to keep width fixed regardless of siderbar toggle
+}  */
 
 .panel {
 	display: flex;
@@ -101,9 +106,12 @@ body{
 	margin: 50px;
 	margin-left: 225px;
 	margin-top: 30px;
+	bottom: 60px;
 	width: calc(100% - 225px);
 	transition: all 0.5s ease;
 	justify-content: center;
+	scroll-snap-align: center;
+  /* scroll-snap-stop: always; */
 }
 
 .subpanel{
@@ -114,7 +122,22 @@ body{
 	text-align: right;
 	margin-top: 20px;
 }
+#pan1 {
+	position: relative;
+}
+.pan1-back {
+	position: relative;
+}
 
+.pan1-front {
+	position: absolute;
+	z-index: 2;
+	max-width: 400px;
+	max-height: 400px;
+	top: calc(55%);
+	left: calc(20%);
+	transition: transform 0.9s ease;
+}
 .img1{
 	flex: 1;
 	text-align: right;
@@ -157,6 +180,10 @@ body{
 	margin-top: -100px;
 }
 
+#pan6{
+	padding-bottom: 50px;
+}
+
 .panel img{
 	flex: 1;
 	width: 80%;
@@ -171,4 +198,8 @@ body.active .sidebar{ /*if sidebar is active*/
 body.active .header, body.active .main, body.active .panel{ /*if sidebar is not active*/
     margin-left: 0;
     width: 100%;
+}
+body.active .pan1-front{
+	top : calc(60%);
+	left: calc(21.5%);
 }
