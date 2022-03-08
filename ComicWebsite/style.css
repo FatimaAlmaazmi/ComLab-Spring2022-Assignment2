@@ -103,9 +103,8 @@ body{
 .panel {
 	display: flex;
 	flex-direction: column;
-	margin: 50px;
+	margin: 40px;
 	margin-left: 225px;
-	margin-top: 40px;
 	width: calc(100% - 225px);
 	justify-content: center;
 	scroll-snap-align: center;
@@ -199,6 +198,11 @@ body.active .sidebar{ /*if sidebar is active*/
 body.active .header, body.active .main, body.active .panel{ /*if sidebar is not active*/
     margin-left: 0px;
     width: 100%;
+}
+
+body.active .pan1-front{
+	top: calc(45%);
+	left: calc(25%);
 }
 
 
