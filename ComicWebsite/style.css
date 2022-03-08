@@ -27,7 +27,7 @@ body{
     padding: 20px 0;
     border-right: 2px solid #ff8000;
     /*to control speed at which bar shows up*/
-    transition: all 0.5s ease;
+    transition: all 0.9s ease;
 }
 
 .sidebar ul li a{
@@ -62,7 +62,7 @@ body{
     margin-left: 225px;
     font-size: 22px;
     /*adding transition to synch with sidebar*/
-    transition: all 0.5s ease;
+    transition: all 0.9s ease;
     width: calc(100% - 225px); /*to keep width fixed regardless of siderbar toggle*/
 }
 
@@ -105,14 +105,12 @@ body{
 	flex-direction: column;
 	margin: 50px;
 	margin-left: 225px;
-	margin-top: 100px;
-	bottom: 100px;
-	padding: 50px;
+	margin-top: 40px;
 	width: calc(100% - 225px);
 	justify-content: center;
 	scroll-snap-align: center;
-	transition: all 0.5s ease; /****
-  /* scroll-snap-stop: always; */
+	transition: all 0.9s ease; 
+    scroll-snap-stop: center;
 }
 
 .subpanel{
@@ -135,8 +133,8 @@ body{
 	z-index: 2;
 	max-width: 400px;
 	max-height: 400px;
-	top: calc(55%);
-	left: calc(20%);
+	top: calc(40%);
+	left: calc(23%);
 	transition: transform 0.9s ease;
 }
 .img1{
@@ -202,7 +200,5 @@ body.active .header, body.active .main, body.active .panel{ /*if sidebar is not 
     margin-left: 0px;
     width: 100%;
 }
-body.active .pan1-front{
-	top : calc(60%);
-	left: calc(21.5%);
-}
+
+
