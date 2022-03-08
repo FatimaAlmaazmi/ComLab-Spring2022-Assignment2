@@ -11,10 +11,15 @@ window.addEventListener('load', function() { AOS.init(); });
 
 var counter = 0;
 
+var ballSound = new Howl({
+  src:['/Users/fatimaalmaazmi/Desktop/ComLabHW/ComLab-Spring2022-Assignment2/ComicWebsite/sounds/ballSound.mp3']
+});
+
 $(document).ready(function(){
   $(".pan1-front").click(function(){
+    ballSound.play();
     $(".pan1-front").animate({left: "+=40%"}, "slow");
-  });
+    });
   $(".pan1-front").click(function(){
     $(".pan1-front").animate({left: "-=40%"}, "slow");
   });
@@ -30,9 +35,6 @@ var barkBarking = new Howl({
   src:['/Users/fatimaalmaazmi/Desktop/ComLabHW/ComLab-Spring2022-Assignment2/ComicWebsite/sounds/barkBarking.mp3']
 });
 
-var ballSound = new Howl({
-  src:['ComicWebsite/sounds/ballSound.mp3']
-});
 
 var doorClosing = new Howl({
   src:['ComicWebsite/sounds/doorClosing.mp3']
@@ -62,10 +64,10 @@ var mailFalling = new Howl({
 //Sound in Panel 1
 
 // document.querySelector('pan0');
-var playing = false;
-$(window).scroll(function(){
-var pageScroll = $(window).scrollTop();
-if(!playing && pageScroll == 0){
-  barkBarking.play();
-}
-});
+// var playing = false;
+// $(window).scroll(function(){
+// var pageScroll = $(window).scrollTop();
+// if(!playing && pageScroll == 0){
+//   barkBarking.play();
+// }
+// });
