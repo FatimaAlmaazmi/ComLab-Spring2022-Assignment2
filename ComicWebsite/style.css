@@ -201,8 +201,8 @@ body.active .header, body.active .main, body.active .panel{ /*if sidebar is not 
 }
 
 body.active .pan1-front{
-	top: calc(45%);
-	left: calc(25%);
+	top: 45%;
+	left: 25%;
 }
 
 

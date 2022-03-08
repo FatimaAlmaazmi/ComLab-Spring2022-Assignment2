@@ -19,7 +19,6 @@ $(document).ready(function(){
     $(".pan1-front").animate({left: "-=40%"}, "slow");
   });
 });
-//$('.pan1-front').css("transform","translate(500px,0)");
 
 
 
