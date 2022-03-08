@@ -10,22 +10,6 @@ document.querySelector("body").classList.toggle("active");
 window.addEventListener('load', function() { AOS.init(); });
 
 
-var ballSound = new Howl({
-  src:['sounds/ballSound.mp3']
-});
-
-$(document).ready(function(){
-  $(".pan1-front").click(function(){
-    ballSound.play();
-    $(".pan1-front").animate({left: "+=40%"}, "slow");
-    });
-  $(".pan1-front").click(function(){
-    $(".pan1-front").animate({left: "-=40%"}, "slow");
-  });
-});
-
-
-
 // Sounds
 
 // declare Sounds
@@ -34,6 +18,9 @@ var barkBarking = new Howl({
   src:['sounds/barkBarking.mp3']
 });
 
+var singleBark = new Howl({
+  src:['sounds/singleBark.mp3']
+});
 
 var doorClosing = new Howl({
   src:['sounds/doorClosing.mp3']
@@ -57,5 +44,22 @@ var knocking = new Howl({
 
 var mailFalling = new Howl({
   src:['sounds/mailFalling.mp3']
+});
+
+var ballSound = new Howl({
+  src:['sounds/ballSound.mp3']
+});
+
+//bark and ball noise on clicking the ball
+
+$(document).ready(function(){
+  $(".pan1-front").click(function(){
+    ballSound.play();
+    $(".pan1-front").animate({left: "+=40%"}, "slow");
+    });
+  $(".pan1-front").click(function(){
+    singleBark.play();
+    $(".pan1-front").animate({left: "-=40%"}, "slow");
+  });
 });
 
