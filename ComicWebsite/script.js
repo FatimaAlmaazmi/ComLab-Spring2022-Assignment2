@@ -11,21 +11,6 @@ window.addEventListener('load', function() { AOS.init(); });
 
 var counter = 0;
 
-// $(document).ready(function(){
-//   $('.pan1-front').click(function(){
-//     if (counter == 0) {
-//       $('.pan1-front').css("transform","translate(500px,0)");
-//       counter = 1;
-//     }
-//     if (counter == 1) {
-//       $('.pan1-front').css("transform","translate(1,0)");
-//       counter = 0;
-//     }
-//
-//   });
-// });
-
-
 $(document).ready(function(){
   $(".pan1-front").click(function(){
     $(".pan1-front").animate({left: "+=40%"}, "slow");
