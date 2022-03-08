@@ -6,13 +6,12 @@ document.querySelector("body").classList.toggle("active");
     document.querySelector("body").classList.toggle("active");
    })
 
-
+//aos scroll animations
 window.addEventListener('load', function() { AOS.init(); });
 
-var counter = 0;
 
 var ballSound = new Howl({
-  src:['/Users/fatimaalmaazmi/Desktop/ComLabHW/ComLab-Spring2022-Assignment2/ComicWebsite/sounds/ballSound.mp3']
+  src:['sounds/ballSound.mp3']
 });
 
 $(document).ready(function(){
@@ -32,42 +31,31 @@ $(document).ready(function(){
 // declare Sounds
 
 var barkBarking = new Howl({
-  src:['/Users/fatimaalmaazmi/Desktop/ComLabHW/ComLab-Spring2022-Assignment2/ComicWebsite/sounds/barkBarking.mp3']
+  src:['sounds/barkBarking.mp3']
 });
 
 
 var doorClosing = new Howl({
-  src:['ComicWebsite/sounds/doorClosing.mp3']
+  src:['sounds/doorClosing.mp3']
 });
 
 var sadBark = new Howl({
-  src:['ComicWebsite/sounds/sadBark.wav']
+  src:['sounds/sadBark.mp3']
 });
 
 var foodSound = new Howl({
-  src:['ComicWebsite/sounds/foodSound.mp3']
+  src:['sounds/foodSound.mp3']
 });
 
 var foodPour = new Howl({
-  src:['ComicWebsite/sounds/foodPour.mp3']
+  src:['sounds/foodPour.mp3']
 });
 
 var knocking = new Howl({
-  src:['ComicWebsite/sounds/knocking.mp3']
+  src:['sounds/knocking.mp3']
 });
 
 var mailFalling = new Howl({
-  src:['ComicWebsite/sounds/mailFalling.mp3']
+  src:['sounds/mailFalling.mp3']
 });
 
-
-//Sound in Panel 1
-
-// document.querySelector('pan0');
-// var playing = false;
-// $(window).scroll(function(){
-// var pageScroll = $(window).scrollTop();
-// if(!playing && pageScroll == 0){
-//   barkBarking.play();
-// }
-// });
