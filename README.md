@@ -17,7 +17,7 @@ Our next step was to sketch the character Bark and get the panels ready so that 
 
 For the coding we used AOS library (panel transitions), Howler.js (sound effects), and jQuery (animation) . We tried to set up the panels using the grid, but that complicated the layout of the website so we opted not to use it.
 The challanges that we encountered during coding were related to sound and formatting the webiste, however we managed to get everything set in the end and the website looked great.
-In addition, we encountered some inconsistency issues with AOS library where it didn't function properly, this made us realize that there might be bugs in some libraries so they don't always work 100%. For example, some of the elements didnt show up when we wanted them to or took longer to appear.
+In addition, we encountered some inconsistency issues with AOS library where it didn't function properly, this made us realize that there might be bugs in some libraries so they don't always work 100%. For example, some of the elements didnt show up when we wanted them to or took longer to appear. However, on chrome when we click inspect it goes back to normal, so that is something we investigated.
 
 ### Reflection
 
