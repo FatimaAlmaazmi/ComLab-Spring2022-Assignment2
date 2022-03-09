@@ -64,21 +64,111 @@ $(document).ready(function(){
 });
 
 
-// //Scroll to top button
-// var scrollUp = document.querySelector('.scrollup');
 
-// window.onscroll = function() {scrollFunction()};
 
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     scrollUp.style.display = "block";
-//   } else {
-//     scrollUp.style.display = "none";
-//   }
-// }
-// scrollUp.addEventListener('click', function(){
-//   document.documentElement.scrollTop = 0;
-// });
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function() {
+
+            $("#beef").click(function(){
+              foodPour.play();
+               $("#beef").effect( "shake", {times:4, distance:10}, 1000);
+            });
+         });
+
+         $(document).ready(function() {
+
+                     $("#chicken").click(function(){
+                      foodPour.play();
+                        $("#chicken").effect( "shake", {times:4, distance:10}, 1000);
+                     });
+                  });
+
+                  $(document).ready(function() {
+
+                              $("#fish").click(function(){
+                                foodPour.play();
+                                 $("#fish").effect( "shake", {times:4, distance:10}, 1000);
+                              });
+                           });
+
+                           $("#beef").click(function(){
+                             $("#food").show();
+                            setTimeout(function () {
+                           $('#food').hide();
+                       }, 3000);
+                           });
+
+                           $("#fish").click(function(){
+                             $("#food").show();
+                             setTimeout(function () {
+                            $('#food').hide();
+                        }, 3000);
+                           });
+
+                           $("#chicken").click(function(){
+                             $("#food").show();
+                             setTimeout(function () {
+                            $('#food').hide();
+                        }, 3000);
+                           });
+
+                           $("#beef").click(function(){
+                             $("#playful-Bark").show();
+                             setTimeout(function () {
+                            $('#playful-Bark').hide();
+                        }, 3000);
+                           });
+
+                           $("#fish").click(function(){
+                             $("#playful-Bark").show();
+                             setTimeout(function () {
+                            $('#playful-Bark').hide();
+                        }, 3000);
+                           });
+
+                           $("#chicken").click(function(){
+                             $("#playful-Bark").show();
+                             setTimeout(function () {
+                            $('#playful-Bark').hide();
+                        }, 3000);
+                           });
+
+
+                           setTimeout(function() {
+                               $('#food').fadeOut('fast');
+                           }, 500);
+
+
+
+
+
+
+var scrollRange = document.body.offsetHeight - window.innerHeight;
+
+//Scroll to top button
+var scrollUp = document.querySelector('.scrollup');
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop >= scrollRange-100 || document.documentElement.scrollTop >= scrollRange-100) {
+    scrollUp.style.display = "block";
+  } else {
+    scrollUp.style.display = "none";
+  }
+}
+scrollUp.addEventListener('click', function(){
+  document.documentElement.scrollTop = 0;
+});
 
 
 function getScrollPercent()
@@ -129,3 +219,5 @@ window.addEventListener('scroll', function(e){
  });
 
 });
+
+
