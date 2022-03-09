@@ -1,4 +1,4 @@
-# The Goodest Dog
+# The Goodest Boy
 ## Comic Website Assignment
 
 Our project is a website about a shiba called Bark, and the readers get to spend the day with Bark and see what adventures lie in his day-to-day life when his owner leaves. We wanted to create a fun and playful comic that makes the readers feel good, something that can brighten up their day.
