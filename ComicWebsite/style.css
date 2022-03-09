@@ -58,7 +58,7 @@ body{
 
 .header { /*defining dimensions for page with the sidebar toggled on inititally*/
 	position: absolute;
-	top: 0;
+	top: 0px;
     margin-left: 225px;
     font-size: 22px;
     /*adding transition to synch with sidebar*/
@@ -175,9 +175,9 @@ body{
 	height: 90%;
 }
 
-#pan0{
-	margin-top: -60px;
-	padding-bottom: 60px;
+#pan0{ /* IMPORTANT */
+	margin-top: -80px;
+	/* ADDING PADDING TO BOTTOM TAKES LAST PANEL OUT OF FRAME */
 }
 
 /* #pan6{
@@ -190,47 +190,16 @@ body{
 	align-self: center;
 }
 
-.section{
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	margin: 20px;
-	filter:  drop-shadow(2px 2px 4px #888888);
-	background-color: aliceblue;
-	width: 80%;
-	justify-content: center;
+.wrapper{
+	margin-top: 150px;
+}
+
+#team{
+	margin-bottom: 250px;
 }
 
 .content{
 	display: flex;
-}
-
-
-.section h3, b{
-
-	padding-top: 30px;
-	padding-bottom: 10px;
-	color:  #004d4d;
-	font-family: 'Roboto Serif', sans-serif;
-	font-weight: bold;
-	font-style: italic;
-	text-align: center;
-
-}
-
-.section h5{
-	flex: 1;
-	font-size: 1.4rem;
-	color:  #004d4d;
-	margin-top: 30px;
-	margin-left: 40px;
-	margin-bottom: 50px;
-	min-width: 400px;
-	max-width: 900px;
-}
-
-.section:hover{
-	background-color: #ffffe6;
 }
 
 .cast{
@@ -241,18 +210,19 @@ body{
 	flex: 1;
 }
 
-.person .cont{
+.person div{
 	text-align: center;
-	font-family: 'Roboto', serif;
-	color: #004d4d;
+	font-family: 'Roboto Serif', serif;
+	font-size: 20px;
+	color: #ff8000;
 	padding: 10px;
 	font-weight: 600;
 }
 
-.person div{
+.person .cont{
 	text-align: center;
-	font-family: 'Roboto Serif', serif;
-	color: #004d4d;
+	font-family: 'Roboto', serif;
+	color: #ff8000;
 	padding: 10px;
 	font-weight: 600;
 }
@@ -263,6 +233,70 @@ body{
 	height: 300px;
 	border-radius: 10%;
 	margin:  0 auto;
+}
+
+
+
+#pan0 .subpanel a {
+  	padding-bottom: 80px;
+}
+#pan0 .subpanel a span{
+  position: absolute;
+  top: calc(100% - 250px);
+  left: calc(100% - 650px);
+  width: 30px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 50px;
+  box-sizing: border-box;
+  transition: all 0.9s ease;
+}
+#pan0 .subpanel a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: black;
+  border-radius: 100%;
+  box-sizing: border-box;
+	-webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 
@@ -280,5 +314,7 @@ body.active .pan1-front{
 	top: 45%;
 	left: 25%;
 }
-
-
+body.active #pan0 .subpanel a, body.active #pan0 .subpanel a span{
+	top: calc(100% - 120px);
+  	left: calc(100% - 760px);
+}
