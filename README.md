@@ -17,9 +17,12 @@ Our next step was to sketch the character Bark and get the panels ready so that 
 
 For the coding we used AOS library (panel transitions), Howler.js (sound effects), and jQuery (animation) . We tried to set up the panels using the grid, but that complicated the layout of the website so we opted not to use it.
 The challanges that we encountered during coding were related to sound and formatting the webiste, however we managed to get everything set in the end and the website looked great.
+In addition, we encountered some inconsistency issues with AOS library where it didn't function properly, this made us realize that there might be bugs in some libraries so they don't always work 100%. For example, some of the elements didnt show up when we wanted them to or took longer to appear.
 
 ### Reflection
 
 We believe that we achieved our vision for the website, it has a playful feel to it, and the interactivity invites the readers into Bark's life. In addition we found it very fun to meet up and work on the little details of the website like adding in the bloopers and team section in the sidebar. Moreover, we were very dedicated to completing the project on time, so we made sure we had assigned the tasks equally and had done the work to the best of our abilities.
+
+
 
 We love Bark and we hope you love him too :) <3
